@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark-hsl: 200, 100%, 6%;
+}
+
+body{
+    margin: 0;
+}
+.full-screen-container{
+    background: rgba(0, 0, 0, 0.4) url('https://images.alphacoders.com/102/102331.jpg');
+    height: 100vh;
+    width : 100vw;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.iris-class{
+    margin: 0;
+    color: orangered;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.form-container{
+    --color : hsl(var(--primary-dark-hsl), 0.7);
+    background-color: var(--color);
+    box-shadow : 0 0 15px 0 var(--color);
+    padding : 40px 30px;
+    width : 80%;
+    max-width : 700px;
+    border-radius: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.form label{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.form input{
+    font-size: 1.0rem;
+    padding: 0.25em;
+    color: black;
+    outline: none;
+}
+
+.submit-button{
+    padding: 0.6em 1em;
+    gap: 50px;
+    font-size: 1.0em;
+    background-color: rgb(110, 175, 110);
+    border-radius: 7px;
+    border: 1px;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus{
+    background-color: rgb(116, 185, 116);
+}
+
+.result{
+    margin: 0;
+    color: aquamarine;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+
+
+.result-value{
+    margin: 0;
+    color: greenyellow;
+    font-size: 1.7rem;
+}

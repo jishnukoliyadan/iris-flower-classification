@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
+<body>
+    <div class="full-screen-container">
+        
+    <div class="form-container">
+        <h1 class="iris-class">Iris Flower Classification</h1>
+    <form class="form" action="/" method="POST">
+        <label for="sepalsength" class="sepalsength">Sepal Length</label>
+        <input type="text" id="sepalsength" name="sepallength" placeholder = "length in Centimeter"/>
+
+        <label for="sepalwidth" class="sepalwidth">Sepal Width</label>
+        <input type="text" id="sepalwidth" name="sepalwidth" placeholder = "length in Centimeter"/>
+
+        <label for="petallength" class="petallength">Petal Length</label>
+        <input type="text" id="petallength" name="petallength" placeholder = "length in Centimeter"/>
+
+        <label for="petalwidth" class="petalwidth">Petal Width</label>
+        <input type="text" id="petalwidth" name="petalwidth" placeholder = "length in Centimeter"/>
+
+        <button id="submit" type="submit" class="submit-button">Submit</button>
+
+        {% if prediction %}
+        <p class="result"><span>Predicted Class : </span><span class="result-value">{{ prediction }}</span></p>
+        {% endif %}
+
+    </form>
+    </div>
+    </div>
+</body>
+</html>
